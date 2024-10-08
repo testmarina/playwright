@@ -3,20 +3,21 @@
 This repository contains functional tests to ensure the application features work as expected. Functional tests simulate real user interactions with the application and validate that the UI across various scenarios.
 
 ### Table of Contents
-#### Introduction
-#### Test Environment
-#### CI/CD Integration
-#### Test Reporting
-#### Conclusion
+- Introduction
+- Test Environment
+- CI/CD Integration
+- Test Reporting
+- Conclusion
 
-#### UI Interactions: Navigation between pages, button clicks, and link redirects.
-#### Search Validation: navigation to 'Let's Shop' by Google search
-#### Login Validation: negative testing: empty filed and incorrect email & password validation
-#### Data Handling: Ensure the data displayed on the UI is correctly fetched and updated.
+### Introduction
+The functional tests in this repository are created using the Page Object Model (POM) and Fixture design patterns for better maintainability and reusability. Below are some of the key areas tested:
+- Search Validation: Verifies that users can navigate to 'Let's Shop' via a Google search.
+- Login Validation: Includes negative test cases for handling empty fields, as well as incorrect email and password combinations.
+- UI Interactions: Tests navigation between pages, button clicks, and link redirects to ensure smooth user experience.
 
 ### Test Environment
-Playwright
-TypeScript
+- Playwright
+- TypeScript
 
 ### CI/CD Integration
 The functional tests are integrated into GitHub Actions for Continuous Integration (CI). The tests are automatically triggered on pull requests and commits to specific branches.
