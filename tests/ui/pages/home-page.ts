@@ -8,39 +8,44 @@ export class HomePage{
   readonly goBtn: Locator;
   readonly careers: Locator;
   readonly todaysDeal: Locator;
+  readonly googleSearch: Locator;
+  readonly letsShop: Locator;
+  readonly addEmail: Locator;
+  readonly addPassword: Locator;
+  readonly loginBtn: Locator;
+  readonly enterValidEmail: Locator;
 
   constructor(page: Page) {
     this.page = page;
-    this.allMenu = page.getByLabel('Open All Categories Menu');
-    this.search = page.getByPlaceholder('Search Amazon');
-    this.goBtn = page.getByRole('button', { name: 'Go', exact: true });
-    this.search = page.getByPlaceholder('Search Amazon');
-    this.todaysDeal = page.getByRole('link', { name: 'Today\'s Deals' });
+    this.googleSearch = page.getByLabel('Search', { exact: true });
+    this.letsShop = page.getByRole('link', { name: 'Let\'s Shop Rahul Shetty' });
+    this.addEmail = page.getByPlaceholder('email@example.com');
+    this.addPassword = page.getByPlaceholder('enter your passsword')
+    this.loginBtn = page.getByRole('button', { name: 'Login' });
+    this.enterValidEmail = page.getByText('*Enter Valid Email')
+
   }
 
-  async goto() {
-    await this.page.goto('https://playwright.dev/');
+  async searchGoogle() {
+    await this.page.goto('https://www.google.com/');
+    await this.googleSearch.fill('rahul shetty client');
+    await this.page.keyboard.press('Enter');
+    await this.letsShop.click();
   }
 
+  async loginValidation() {
+    await this.loginBtn.click();
+    await this.addEmail.fill('test@test@gmail.com');
+    await this.addPassword.fill('test');
+    await this.loginBtn.click();
+    await this.enterValidEmail.isVisible();
 
+  }
 
   async countLinks() {
-
   const links = await this.page.$$eval('a', anchors => anchors.length);
   console.log(`Total number of links: ${links}`);
   expect(links).toBe(24); 
   }
 
-
-  async searchItem(item: string) {
-    await this.search.click()
-   await this.search.fill(item);
-
-
-  }
-
-  async todaysDealSelect() {
-
-    await this.page.getByRole('link', { name: 'Today\'s Deals' }).click();
-
-}}
+}
