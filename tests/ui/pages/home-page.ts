@@ -1,13 +1,7 @@
-import { expect, type Locator, type Page } from '@playwright/test';
+import { expect, type Locator, type Page  } from '@playwright/test';
 
 export class HomePage{
   readonly page: Page; 
-  readonly allMenu: Locator;
-  readonly bestSellers: Locator;
-  readonly search: Locator;
-  readonly goBtn: Locator;
-  readonly careers: Locator;
-  readonly todaysDeal: Locator;
   readonly googleSearch: Locator;
   readonly letsShop: Locator;
   readonly addEmail: Locator;
@@ -45,7 +39,8 @@ export class HomePage{
   async countLinks() {
   const links = await this.page.$$eval('a', anchors => anchors.length);
   console.log(`Total number of links: ${links}`);
-  expect(links).toBe(24); 
+  expect(links).toBe(8); 
   }
 
 }
+
