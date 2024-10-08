@@ -1,4 +1,4 @@
-## Functional Testing for Playwright
+## Functional Testing for 'Let's Shop'
 ### Overview
 This repository contains functional tests to ensure the application features work as expected. Functional tests simulate real user interactions with the application and validate that the UI across various scenarios.
 
@@ -10,8 +10,8 @@ This repository contains functional tests to ensure the application features wor
 #### Conclusion
 
 UI Interactions: Navigation between pages, button clicks, and link redirects.
-Form Submissions: Validation of user inputs and form submissions.
-Search and Filter: Checking search behavior and accuracy of results.
+Search Validation: navigation to 'Let's Shop' by Google search
+Login Validation: negative testing: empty filed and incorrect email & password validation
 Data Handling: Ensure the data displayed on the UI is correctly fetched and updated.
 
 ### Test Environment
