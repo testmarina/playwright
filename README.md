@@ -9,10 +9,10 @@ This repository contains functional tests to ensure the application features wor
 #### Test Reporting
 #### Conclusion
 
-UI Interactions: Navigation between pages, button clicks, and link redirects.
-Search Validation: navigation to 'Let's Shop' by Google search
-Login Validation: negative testing: empty filed and incorrect email & password validation
-Data Handling: Ensure the data displayed on the UI is correctly fetched and updated.
+#### UI Interactions: Navigation between pages, button clicks, and link redirects.
+#### Search Validation: navigation to 'Let's Shop' by Google search
+#### Login Validation: negative testing: empty filed and incorrect email & password validation
+#### Data Handling: Ensure the data displayed on the UI is correctly fetched and updated.
 
 ### Test Environment
 Playwright
