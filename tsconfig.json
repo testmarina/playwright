@@ -1,0 +1,13 @@
+{"compileOnSave": false,
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "pages": ["tests/ui/pages/*"],
+            "ui/*":["tests/ui/*"]
+        },
+      "target": "ESNext",
+      "module": "commonjs",
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node",
+      }
+  }

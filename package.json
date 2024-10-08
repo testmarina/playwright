@@ -1,0 +1,25 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "playwright-core": "^1.44.1",
+    "undici-types": "^5.26.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.5.5",
+    "prettier": "3.3.3"
+  },
+  "scripts": {
+    "ui:regression": "npx playwright test ui",
+    "ui:homePage": "npx playwright test amazonHomePageTest.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
