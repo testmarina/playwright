@@ -1,4 +1,4 @@
-## Functional Testing for Playwright
+## Functional Testing with Playwright
 ### Overview
 This repository contains functional tests to ensure the application features work as expected. Functional tests simulate real user interactions with the application and validate that the UI across various scenarios.
 
